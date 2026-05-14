@@ -1,48 +1,25 @@
-# SPDX-FileContributor: Clarvia ASBL <contact@clarvia.org>
-#
-# REUSE configuration for clarvia-org/workflow-data
-# See https://reuse.software/spec-3.3/ for the specification.
-
 version = 1
 
-# ── Data & documentation: CC BY 4.0 ──────────────────────────────────
 [[annotations]]
 path = [
-    "data/**",
-    "schemas/**",
-    "docs/**",
-    "*.md",
-    "*.json",
-    "*.yaml",
-    "*.yml",
-    "*.csv",
-    "*.tsv",
-    "CITATION.cff",
+  "data/**",
+  "schemas/**",
+  "exports/**",
+  "README.md",
+  "CHANGELOG.md",
+  "GOVERNANCE.md",
+  "METHODOLOGY.md",
+  "datapackage.json"
 ]
-SPDX-FileCopyrightText = "2025 Clarvia ASBL"
+SPDX-FileCopyrightText = "CLARVIA ASBL"
 SPDX-License-Identifier = "CC-BY-4.0"
 
-# ── Scripts & tooling: Apache 2.0 ────────────────────────────────────
 [[annotations]]
 path = [
-    "scripts/**",
-    "tools/**",
-    "tests/**",
-    "*.py",
-    "*.sh",
-    "*.ps1",
-    "Makefile",
+  "scripts/**",
+  "tests/**",
+  ".github/**",
+  "requirements.txt"
 ]
-SPDX-FileCopyrightText = "2025 Clarvia ASBL"
+SPDX-FileCopyrightText = "CLARVIA ASBL"
 SPDX-License-Identifier = "Apache-2.0"
-
-# ── Repository configuration files ───────────────────────────────────
-[[annotations]]
-path = [
-    ".github/**",
-    ".gitignore",
-    ".editorconfig",
-    "REUSE.toml",
-]
-SPDX-FileCopyrightText = "2025 Clarvia ASBL"
-SPDX-License-Identifier = "CC-BY-4.0"

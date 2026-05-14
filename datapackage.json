@@ -1,59 +1,93 @@
 {
+  "profile": "data-package",
   "name": "clarvia-workflow-data",
-  "title": "Clarvia Bereavement Workflow Data",
-  "description": "Source-backed bereavement workflow data, schemas, and exports for Clarvia.",
-  "homepage": "https://clarvia.org",
-  "version": "0.1.0",
+  "title": "Clarvia Workflow Data",
+  "description": "Source-backed workflow data, schemas, provenance, exports, and validation for Clarvia's bereavement administration infrastructure.",
+  "homepage": "https://github.com/clarvia-org/workflow-data",
+  "version": "0.1.0-alpha.0",
   "licenses": [
     {
       "name": "CC-BY-4.0",
-      "path": "LICENSES/CC-BY-4.0.txt",
       "title": "Creative Commons Attribution 4.0 International",
-      "scope": "data, schemas, documentation"
+      "path": "LICENSES/CC-BY-4.0.txt"
     },
     {
       "name": "Apache-2.0",
-      "path": "LICENSES/Apache-2.0.txt",
       "title": "Apache License 2.0",
-      "scope": "scripts, tooling, tests"
+      "path": "LICENSES/Apache-2.0.txt"
     }
   ],
   "contributors": [
     {
-      "title": "Clarvia ASBL",
-      "email": "contact@clarvia.org",
+      "title": "CLARVIA ASBL",
       "role": "maintainer"
     }
+  ],
+  "keywords": [
+    "bereavement",
+    "workflow",
+    "open-data",
+    "public-interest",
+    "provenance",
+    "interoperability",
+    "Luxembourg",
+    "Europe"
   ],
   "resources": [
     {
       "name": "sources",
-      "path": "data/sources/**/*.json",
-      "description": "Citable legal and institutional sources.",
+      "path": "data/sources/**/*.yaml",
+      "format": "yaml",
+      "mediatype": "application/x-yaml",
       "schema": "schemas/v0.1/source.schema.json"
     },
     {
       "name": "institutions",
-      "path": "data/institutions/**/*.json",
-      "description": "Government offices, banks, notaries, and other entities.",
+      "path": "data/institutions/**/*.yaml",
+      "format": "yaml",
+      "mediatype": "application/x-yaml",
       "schema": "schemas/v0.1/institution.schema.json"
     },
     {
+      "name": "document-requirements",
+      "path": "data/document_requirements/**/*.yaml",
+      "format": "yaml",
+      "mediatype": "application/x-yaml",
+      "schema": "schemas/v0.1/document_requirement.schema.json"
+    },
+    {
+      "name": "deadlines",
+      "path": "data/deadlines/**/*.yaml",
+      "format": "yaml",
+      "mediatype": "application/x-yaml",
+      "schema": "schemas/v0.1/deadline.schema.json"
+    },
+    {
+      "name": "conditions",
+      "path": "data/conditions/**/*.yaml",
+      "format": "yaml",
+      "mediatype": "application/x-yaml",
+      "schema": "schemas/v0.1/condition.schema.json"
+    },
+    {
       "name": "tasks",
-      "path": "data/tasks/**/*.json",
-      "description": "Discrete bereavement actions.",
+      "path": "data/tasks/**/*.yaml",
+      "format": "yaml",
+      "mediatype": "application/x-yaml",
       "schema": "schemas/v0.1/task.schema.json"
     },
     {
       "name": "workflows",
-      "path": "data/workflows/**/*.json",
-      "description": "Ordered task sequences per jurisdiction.",
+      "path": "data/workflows/**/*.yaml",
+      "format": "yaml",
+      "mediatype": "application/x-yaml",
       "schema": "schemas/v0.1/workflow.schema.json"
     },
     {
       "name": "scenarios",
-      "path": "data/scenarios/**/*.json",
-      "description": "Bereavement situations selecting applicable workflows.",
+      "path": "data/scenarios/**/*.yaml",
+      "format": "yaml",
+      "mediatype": "application/x-yaml",
       "schema": "schemas/v0.1/scenario.schema.json"
     }
   ]

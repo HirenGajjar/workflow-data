@@ -1,13 +1,39 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to `workflow-data` will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+This project follows a conservative publication model.
+
+Workflow content may be drafted, structured, reviewed, and published in separate steps.
+
+---
 
 ## [Unreleased]
 
 ### Added
-- Initial repository structure and v0.1 schemas
-- Verification ladder: discovered → structured-from-source → source-checked → expert-reviewed → published → stale-review → superseded
-- REUSE-compliant dual licensing (CC BY 4.0 for data/docs, Apache 2.0 for scripts)
-- Country directory scaffolding for LU, FR, BE, DE, PT
+
+- Initial repository structure.
+- Initial v0.1 schema files.
+- Initial Luxembourg source, institution, task, workflow, and scenario examples.
+- Initial validation script.
+- Initial JSON export script.
+
+### Changed
+
+- Nothing yet.
+
+### Deprecated
+
+- Nothing yet.
+
+### Removed
+
+- Nothing yet.
+
+### Fixed
+
+- Nothing yet.
+
+### Security
+
+- Nothing yet.
