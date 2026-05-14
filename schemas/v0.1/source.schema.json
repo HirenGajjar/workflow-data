@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clarvia.org/schemas/v0.1/source.schema.json",
+  "title": "Source",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "object_type",
+    "title",
+    "source_type",
+    "url",
+    "jurisdiction",
+    "languages",
+    "institution_ids",
+    "accessed_at",
+    "verification_status",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^source:[a-z]{2}:[a-z0-9-]+(:[a-z0-9-]+)*$"
+    },
+    "object_type": {
+      "const": "Source"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "government_portal",
+        "statute",
+        "regulation",
+        "official_form",
+        "administrative_guidance",
+        "institutional_page",
+        "other_authoritative"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "jurisdiction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["country"],
+      "properties": {
+        "country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "region": {
+          "type": ["string", "null"]
+        },
+        "municipality": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+      },
+      "uniqueItems": true
+    },
+    "institution_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^institution:[a-z]{2}:[a-z0-9-]+(:[a-z0-9-]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "accessed_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "last_verified_at": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "evidence_locator": {
+      "type": ["string", "null"],
+      "description": "Section, heading, paragraph, article number, or page location used as evidence."
+    },
+    "reuse_notes": {
+      "type": ["string", "null"]
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "discovered",
+        "structured-from-source",
+        "source-checked",
+        "expert-reviewed",
+        "published",
+        "stale-review",
+        "superseded"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["created_at", "created_by"],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "updated_by": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "notes": {
+      "type": ["string", "null"]
+    }
+  }
+}

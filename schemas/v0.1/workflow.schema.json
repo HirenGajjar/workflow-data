@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clarvia.org/schemas/v0.1/workflow.schema.json",
+  "title": "Workflow",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "object_type",
+    "title",
+    "jurisdiction",
+    "workflow_type",
+    "tasks",
+    "source_ids",
+    "verification_status",
+    "publication_status",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^workflow:[a-z]{2}:[a-z0-9-]+(:[a-z0-9-]+)*$"
+    },
+    "object_type": {
+      "const": "Workflow"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": ["string", "null"]
+    },
+    "jurisdiction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["country"],
+      "properties": {
+        "country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "region": {
+          "type": ["string", "null"]
+        },
+        "municipality": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "workflow_type": {
+      "type": "string",
+      "enum": [
+        "national_core",
+        "regional_overlay",
+        "municipal_overlay",
+        "cross_border_scenario",
+        "other"
+      ]
+    },
+    "tasks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["task_id", "order"],
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "pattern": "^task:[a-z]{2}:[a-z0-9-]+(:[a-z0-9-]+)*$"
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^task:[a-z]{2}:[a-z0-9-]+(:[a-z0-9-]+)*$"
+            },
+            "uniqueItems": true
+          },
+          "condition_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^condition:[a-z0-9-]+(:[a-z0-9-]+)*$"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "scenario_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^scenario:[a-z0-9-]+(:[a-z0-9-]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "source_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^source:[a-z]{2}:[a-z0-9-]+(:[a-z0-9-]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "discovered",
+        "structured-from-source",
+        "source-checked",
+        "expert-reviewed",
+        "published",
+        "stale-review",
+        "superseded"
+      ]
+    },
+    "publication_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "review",
+        "published",
+        "withheld",
+        "archived"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["created_at", "created_by"],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "updated_by": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "notes": {
+      "type": ["string", "null"]
+    }
+  }
+}

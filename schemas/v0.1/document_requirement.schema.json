@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clarvia.org/schemas/v0.1/document_requirement.schema.json",
+  "title": "DocumentRequirement",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "object_type",
+    "canonical_name",
+    "jurisdiction",
+    "source_ids",
+    "verification_status",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^document:[a-z]{2}:[a-z0-9-]+(:[a-z0-9-]+)*$"
+    },
+    "object_type": {
+      "const": "DocumentRequirement"
+    },
+    "canonical_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "synonyms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "jurisdiction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["country"],
+      "properties": {
+        "country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "region": {
+          "type": ["string", "null"]
+        },
+        "municipality": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "issuing_authority_id": {
+      "type": ["string", "null"],
+      "pattern": "^institution:[a-z]{2}:[a-z0-9-]+(:[a-z0-9-]+)*$"
+    },
+    "accepted_forms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["original", "copy", "certified_copy", "digital", "unknown"]
+      },
+      "uniqueItems": true
+    },
+    "source_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^source:[a-z]{2}:[a-z0-9-]+(:[a-z0-9-]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "discovered",
+        "structured-from-source",
+        "source-checked",
+        "expert-reviewed",
+        "published",
+        "stale-review",
+        "superseded"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["created_at", "created_by"],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "updated_by": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "notes": {
+      "type": ["string", "null"]
+    }
+  }
+}

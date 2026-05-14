@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clarvia.org/schemas/v0.1/institution.schema.json",
+  "title": "Institution",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "object_type",
+    "name",
+    "jurisdiction",
+    "function",
+    "official_site",
+    "languages",
+    "verification_status",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^institution:[a-z]{2}:[a-z0-9-]+(:[a-z0-9-]+)*$"
+    },
+    "object_type": {
+      "const": "Institution"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "jurisdiction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["country"],
+      "properties": {
+        "country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "region": {
+          "type": ["string", "null"]
+        },
+        "municipality": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "function": {
+      "type": "string"
+    },
+    "official_site": {
+      "type": "string",
+      "format": "uri"
+    },
+    "contact_channels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "value"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["website", "phone", "email", "postal", "in_person", "other"]
+          },
+          "value": {
+            "type": "string"
+          },
+          "notes": {
+            "type": ["string", "null"]
+          }
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+      },
+      "uniqueItems": true
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^source:[a-z]{2}:[a-z0-9-]+(:[a-z0-9-]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "discovered",
+        "structured-from-source",
+        "source-checked",
+        "expert-reviewed",
+        "published",
+        "stale-review",
+        "superseded"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["created_at", "created_by"],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "updated_by": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "notes": {
+      "type": ["string", "null"]
+    }
+  }
+}
