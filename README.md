@@ -1,15 +1,36 @@
 # workflow-data
 
-Source-backed workflow data, schemas, provenance, exports, and validation for Clarvia.
+**Clarvia helps grieving families navigate the mountain of paperwork after losing a loved one.** Every small contribution here — a source check, a translation, a link fix — reduces that burden for someone in Luxembourg or across Europe.
 
-This repository is the core data layer for Clarvia's open bereavement workflow infrastructure.
+🌐 [clarvia.org](https://clarvia.org) · 📋 [Good first issues](https://github.com/clarvia-org/workflow-data/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) · 📖 [How to contribute](https://github.com/clarvia-org/.github/blob/main/CONTRIBUTING.md)
 
-It contains structured administrative workflow data that can be used to generate:
+---
+
+Source-backed workflow data, schemas, provenance, exports, and validation for [Clarvia](https://clarvia.org).
+
+This repository is the core data layer for Clarvia's open bereavement workflow infrastructure. It contains structured administrative workflow data that can be used to generate:
 
 - human-readable checklists,
 - machine-readable exports,
 - review pipelines,
 - and lightweight public API views.
+
+---
+
+## How to help in under 30 minutes
+
+You don't need to be a developer. Many of our most valuable tasks require attention to detail, language skills, or domain knowledge — not code.
+
+| Task | Time | Skills needed |
+|---|---|---|
+| [Verify a source URL is still current](https://github.com/clarvia-org/workflow-data/issues?q=is%3Aissue+is%3Aopen+label%3A%22type%3A+source%22+label%3A%22good+first+issue%22) | ~15 min | Browser + attention to detail |
+| [Translate source descriptions to French or German](https://github.com/clarvia-org/workflow-data/issues?q=is%3Aissue+is%3Aopen+label%3A%22type%3A+translation%22) | ~20 min | French or German proficiency |
+| [Review and mark a source as verified](https://github.com/clarvia-org/workflow-data/issues/23) | ~15 min | Attention to detail |
+| [Write methodology documentation](https://github.com/clarvia-org/workflow-data/issues/21) | ~30 min | Clear writing in English |
+| [Add a new official source record](https://github.com/clarvia-org/workflow-data/issues?q=is%3Aissue+is%3Aopen+label%3A%22type%3A+source%22+label%3A%22good+first+issue%22) | ~20 min | Basic YAML editing |
+
+👉 **Browse all [good first issues](https://github.com/clarvia-org/workflow-data/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)** to find something that fits your skills.
+
 
 ---
 
