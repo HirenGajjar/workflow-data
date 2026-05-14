@@ -1,0 +1,60 @@
+{
+  "name": "clarvia-workflow-data",
+  "title": "Clarvia Bereavement Workflow Data",
+  "description": "Source-backed bereavement workflow data, schemas, and exports for Clarvia.",
+  "homepage": "https://clarvia.org",
+  "version": "0.1.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "title": "Creative Commons Attribution 4.0 International",
+      "scope": "data, schemas, documentation"
+    },
+    {
+      "name": "Apache-2.0",
+      "path": "LICENSES/Apache-2.0.txt",
+      "title": "Apache License 2.0",
+      "scope": "scripts, tooling, tests"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Clarvia ASBL",
+      "email": "contact@clarvia.org",
+      "role": "maintainer"
+    }
+  ],
+  "resources": [
+    {
+      "name": "sources",
+      "path": "data/sources/**/*.json",
+      "description": "Citable legal and institutional sources.",
+      "schema": "schemas/v0.1/source.schema.json"
+    },
+    {
+      "name": "institutions",
+      "path": "data/institutions/**/*.json",
+      "description": "Government offices, banks, notaries, and other entities.",
+      "schema": "schemas/v0.1/institution.schema.json"
+    },
+    {
+      "name": "tasks",
+      "path": "data/tasks/**/*.json",
+      "description": "Discrete bereavement actions.",
+      "schema": "schemas/v0.1/task.schema.json"
+    },
+    {
+      "name": "workflows",
+      "path": "data/workflows/**/*.json",
+      "description": "Ordered task sequences per jurisdiction.",
+      "schema": "schemas/v0.1/workflow.schema.json"
+    },
+    {
+      "name": "scenarios",
+      "path": "data/scenarios/**/*.json",
+      "description": "Bereavement situations selecting applicable workflows.",
+      "schema": "schemas/v0.1/scenario.schema.json"
+    }
+  ]
+}

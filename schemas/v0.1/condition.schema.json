@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://data.clarvia.org/schemas/v0.1/condition.schema.json",
+  "title": "Condition",
+  "description": "A factual predicate about the deceased or bereaved that gates which tasks, documents, or deadlines apply.",
+  "type": "object",
+  "required": ["id", "label", "type", "valueType"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^cond-[a-z0-9-]+$",
+      "description": "Unique condition ID. Not country-prefixed — reusable across jurisdictions."
+    },
+    "label": { "type": "string", "minLength": 1 },
+    "labelTranslations": { "type": "object", "additionalProperties": { "type": "string" } },
+    "description": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": ["marital-status","children","property","employment","residence","nationality","cross-border","will-exists","insurance","business-owner","minor-heirs","other"]
+    },
+    "valueType": { "type": "string", "enum": ["boolean","enum","integer"] },
+    "enumValues": { "type": "array", "items": { "type": "string" } },
+    "defaultValue": {},
+    "notes": { "type": "string" }
+  }
+}

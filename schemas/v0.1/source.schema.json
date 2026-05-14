@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://data.clarvia.org/schemas/v0.1/source.schema.json",
+  "title": "Source",
+  "description": "A citable legal, regulatory, or institutional source backing a Clarvia workflow fact. Every publishable item must trace to at least one Source.",
+  "type": "object",
+  "required": ["id", "url", "title", "jurisdiction", "language", "accessDate", "reviewStatus"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^src-[a-z]{2}-[a-z0-9-]+$",
+      "description": "Unique source identifier. Format: src-{country}-{slug}, e.g. src-lu-guichet-succession."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical URL where the source was accessed."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable title of the source document or page."
+    },
+    "publisher": {
+      "type": "string",
+      "description": "Organisation or entity that published the source."
+    },
+    "jurisdiction": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 country code, e.g. LU, FR, DE."
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[a-z]{2}$",
+      "description": "ISO 639-1 language code of the source content, e.g. fr, de, en."
+    },
+    "accessDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date (YYYY-MM-DD) the source was last accessed and verified."
+    },
+    "publicationDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the source was published or last updated by its publisher."
+    },
+    "legalReference": {
+      "type": "string",
+      "description": "Formal legal citation if the source is legislation or regulation."
+    },
+    "archiveUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Wayback Machine or other archive URL for permanence."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-text editorial notes about the source."
+    },
+    "reviewStatus": {
+      "$ref": "#/$defs/verificationStatus"
+    },
+    "reviewEvents": {
+      "type": "array",
+      "items": { "$ref": "review_event.schema.json" },
+      "description": "Ordered audit trail of review actions on this source."
+    }
+  },
+  "$defs": {
+    "verificationStatus": {
+      "type": "string",
+      "enum": [
+        "discovered",
+        "structured-from-source",
+        "source-checked",
+        "expert-reviewed",
+        "published",
+        "stale-review",
+        "superseded"
+      ],
+      "description": "Clarvia verification ladder. Objects progress upward; stale-review and superseded are decay states."
+    }
+  }
+}

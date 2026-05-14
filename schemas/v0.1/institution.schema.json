@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://data.clarvia.org/schemas/v0.1/institution.schema.json",
+  "title": "Institution",
+  "description": "A government office, notary, bank, insurer, or other entity involved in bereavement workflows.",
+  "type": "object",
+  "required": ["id", "name", "jurisdiction", "type", "sourceRefs", "reviewStatus"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^inst-[a-z]{2}-[a-z0-9-]+$",
+      "description": "Unique institution identifier. Format: inst-{country}-{slug}."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Official name of the institution."
+    },
+    "nameTranslations": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Name in other languages. Keys are ISO 639-1 codes."
+    },
+    "jurisdiction": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 country code."
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "government",
+        "municipality",
+        "court",
+        "notary",
+        "bank",
+        "insurer",
+        "pension-fund",
+        "employer",
+        "utility",
+        "healthcare",
+        "registry",
+        "other"
+      ],
+      "description": "Category of institution."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Official website."
+    },
+    "phone": {
+      "type": "string",
+      "description": "Main contact phone number."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Main contact email."
+    },
+    "address": {
+      "type": "string",
+      "description": "Physical address."
+    },
+    "notes": {
+      "type": "string"
+    },
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/sourceRef" },
+      "description": "At least one source backing this institution entry."
+    },
+    "reviewStatus": {
+      "$ref": "source.schema.json#/$defs/verificationStatus"
+    },
+    "reviewEvents": {
+      "type": "array",
+      "items": { "$ref": "review_event.schema.json" }
+    }
+  },
+  "$defs": {
+    "sourceRef": {
+      "type": "object",
+      "required": ["sourceId"],
+      "additionalProperties": false,
+      "properties": {
+        "sourceId": {
+          "type": "string",
+          "pattern": "^src-[a-z]{2}-[a-z0-9-]+$",
+          "description": "ID of the referenced Source object."
+        },
+        "relevantSection": {
+          "type": "string",
+          "description": "Section, article, or page within the source."
+        },
+        "quote": {
+          "type": "string",
+          "description": "Direct quote from the source supporting this fact."
+        }
+      },
+      "description": "A reference to a Source object with optional section and quote."
+    }
+  }
+}

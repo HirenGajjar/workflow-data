@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://data.clarvia.org/schemas/v0.1/review_event.schema.json",
+  "title": "ReviewEvent",
+  "description": "An audit-trail entry recording a review action on a Clarvia data object. Captures who reviewed, when, against which source, and the resulting status change.",
+  "type": "object",
+  "required": ["date", "reviewerRole", "previousStatus", "newStatus"],
+  "additionalProperties": false,
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date (YYYY-MM-DD) the review was performed."
+    },
+    "reviewerRole": {
+      "type": "string",
+      "enum": ["contributor", "domain-expert", "legal-reviewer", "maintainer"],
+      "description": "Role of the reviewer. Personal names are never stored in data files."
+    },
+    "previousStatus": {
+      "$ref": "source.schema.json#/$defs/verificationStatus"
+    },
+    "newStatus": {
+      "$ref": "source.schema.json#/$defs/verificationStatus"
+    },
+    "sourceId": {
+      "type": "string",
+      "pattern": "^src-[a-z]{2}-[a-z0-9-]+$",
+      "description": "Source checked during this review, if applicable."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-text notes about what was verified or changed."
+    }
+  }
+}
