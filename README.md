@@ -36,13 +36,17 @@ You don't need to be a developer. Many of our most valuable tasks require attent
 
 ## Project scope
 
-Clarvia focuses on bereavement administration, starting from Luxembourg and cross-border corridors in Europe.
+Clarvia focuses on bereavement administration and related family support workflows.
+
+The first service is being built and validated in Luxembourg. The data model is designed to recognise cross-border realities from the beginning, because many Luxembourg family situations involve neighbouring countries, foreign institutions, multilingual documents, or responsibilities outside one jurisdiction.
 
 This repository models administrative workflows using official and authoritative sources.
 
 Clarvia provides administrative guidance based on official sources.
 
 It does not provide individualized legal advice.
+
+The public data should not contain personal bereavement cases, private family information, or sensitive personal documents.
 
 ---
 
@@ -95,13 +99,13 @@ Workflow data may use the following verification states:
 
 Only maintainers should mark workflow content as `published`.
 
-## Current coverage
+## Implementation path
 
-- **Luxembourg** — alpha source registry and workflow data in progress
-- **France** — source mapping planned
-- **Belgium** — jurisdiction modeling planned
-- **Germany** — federal-core and state-overlay modeling planned
-- **Portugal** — source mapping planned
+- Luxembourg — first checklist and source-backed workflow foundation to build and validate
+- France, Belgium, Germany — future or Luxembourg-relevant source mapping where cross-border situations require it
+- Portugal and other European jurisdictions — possible future expansion after the model and review process mature
+
+No jurisdiction should be treated as published guidance until its workflow data has appropriate sources, review status, and publication approval.
 
 ## Contribution rules
 
