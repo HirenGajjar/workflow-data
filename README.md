@@ -8,7 +8,7 @@
 
 Source-backed workflow data, schemas, provenance, exports, and validation for [Clarvia](https://clarvia.org).
 
-This repository is the core data layer for Clarvia's open bereavement workflow infrastructure. It contains structured administrative workflow data that can be used to generate:
+This repository is the core data layer for Clarvia's open bereavement workflow infrastructure. It is intended to become a reusable open dataset and workflow specification for source-backed bereavement administration. It contains structured administrative workflow data that can be used to generate:
 
 - human-readable checklists,
 - machine-readable exports,
