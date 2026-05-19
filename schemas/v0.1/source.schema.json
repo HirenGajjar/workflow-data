@@ -27,7 +27,16 @@
     },
     "title": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "description": "Canonical title in the source's primary language (usually English for Guichet)."
+    },
+    "title_fr": {
+      "type": ["string", "null"],
+      "description": "French translation of the source title."
+    },
+    "title_de": {
+      "type": ["string", "null"],
+      "description": "German translation of the source title."
     },
     "source_type": {
       "type": "string",
@@ -93,6 +102,18 @@
     },
     "reuse_notes": {
       "type": ["string", "null"]
+    },
+    "description": {
+      "type": ["string", "null"],
+      "description": "Brief English description of the source content."
+    },
+    "description_fr": {
+      "type": ["string", "null"],
+      "description": "French translation of the source description."
+    },
+    "description_de": {
+      "type": ["string", "null"],
+      "description": "German translation of the source description."
     },
     "verification_status": {
       "type": "string",
