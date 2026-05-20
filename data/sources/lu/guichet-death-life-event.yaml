@@ -1,6 +1,8 @@
 id: source:lu:guichet:death-life-event
 object_type: Source
 title: "Death of a close relative"
+title_fr: "Décès d'un proche"
+description_fr: "Données administratives officielles concernant les démarches à suivre lors du décès d'un proche au Luxembourg."
 source_type: government_portal
 url: "https://guichet.public.lu/en/citoyens/life-event/famille-education/deces-proche.html"
 jurisdiction:
@@ -9,6 +11,7 @@ jurisdiction:
   municipality: null
 languages:
   - en
+  - fr
 institution_ids:
   - institution:lu:guichet
 accessed_at: "2026-05-14"
