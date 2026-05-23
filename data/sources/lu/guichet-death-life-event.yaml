@@ -2,6 +2,7 @@ id: source:lu:guichet:death-life-event
 object_type: Source
 title: "Death of a close relative"
 title_fr: "Décès d'un proche"
+description: "Official Luxembourg government guidance on the administrative steps to take following the death of a close relative, including required declarations, time-sensitive obligations, and the responsible institutions."
 description_fr: "Données administratives officielles concernant les démarches à suivre lors du décès d'un proche au Luxembourg."
 source_type: government_portal
 url: "https://guichet.public.lu/en/citoyens/life-event/famille-education/deces-proche.html"
