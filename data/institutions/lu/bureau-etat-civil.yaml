@@ -1,0 +1,26 @@
+id: institution:lu:bureau-etat-civil
+object_type: Institution
+name: "Bureau de l'état civil (Civil Registrar's Office)"
+jurisdiction:
+  country: LU
+  region: null
+  municipality: null
+function: "Registers civil status events including births, marriages, and deaths. Receives death declarations and issues death certificates and related documents on behalf of the communal administration."
+official_site: "https://guichet.public.lu/en/citoyens/justice/certificats-copies-actes-casier-judicaire/certificats-copies-actes/acte-deces.html"
+contact_channels:
+  - type: website
+    value: "https://guichet.public.lu/en/citoyens/justice/certificats-copies-actes-casier-judicaire/certificats-copies-actes/acte-deces.html"
+    notes: "Guichet.lu page listing all communal administration contact details for death certificate requests."
+languages:
+  - fr
+  - de
+  - lb
+source_ids:
+  - source:lu:guichet:death-certificate
+verification_status: structured-from-source
+provenance:
+  created_at: "2026-05-25"
+  created_by: "HirenGajjar"
+  updated_at: null
+  updated_by: null
+notes: "The Bureau de l'état civil exists within every communal administration in Luxembourg. This record represents the institution type, not any specific commune's office. Only the commune where the death occurred can issue a death certificate."
