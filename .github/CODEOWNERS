@@ -1,0 +1,24 @@
+# CODEOWNERS - workflow-data
+# These owners are automatically requested for review on PRs
+# that modify the matching paths.
+
+# Schemas define the data model - changes here affect all data files
+/schemas/                   @TommiLindfors
+
+# Workflows define the core bereavement process sequences
+/data/workflows/            @TommiLindfors
+
+# Scenarios define how workflows are composed
+/data/scenarios/            @TommiLindfors
+
+# Validation and export scripts
+/scripts/                   @TommiLindfors
+
+# CI/CD configuration
+/.github/                   @TommiLindfors
+
+# Governance and methodology
+/GOVERNANCE.md              @TommiLindfors
+/METHODOLOGY.md             @TommiLindfors
+/REUSE.toml                 @TommiLindfors
+/datapackage.json           @TommiLindfors
