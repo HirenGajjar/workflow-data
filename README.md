@@ -1,6 +1,6 @@
 # workflow-data
 
-**Clarvia helps grieving families navigate the mountain of paperwork after losing a loved one.** Every small contribution here — a source check, a translation, a link fix — reduces that burden for someone in Luxembourg or across Europe.
+**Open workflow data, schemas, and validation for source-backed administrative guidance.** This repository is the core data layer for Clarvia's open bereavement workflow infrastructure - designed for cross-jurisdiction reuse across European administrative systems. Every contribution - a source check, a schema improvement, a validation fix - strengthens a reusable commons for bereavement administration.
 
 🌐 [clarvia.org](https://clarvia.org) · 📋 [Good first issues](https://github.com/clarvia-org/workflow-data/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) · 📖 [How to contribute](https://github.com/clarvia-org/.github/blob/main/CONTRIBUTING.md)
 
