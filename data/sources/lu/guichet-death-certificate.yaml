@@ -2,8 +2,10 @@ id: source:lu:guichet:death-certificate
 object_type: Source
 title: "Death certificate"
 title_fr: "Acte de décès"
+title_de: "Sterbeurkunde"
 description: "Official Luxembourg government guidance on obtaining a death certificate, including the issuing authority, required supporting documents, accepted forms, and the information contained in the certificate."
 description_fr: "Guide officiel du gouvernement luxembourgeois sur l'obtention d'un acte de décès, notamment l'autorité émettrice, les pièces justificatives requises, les formes acceptées et les informations contenues dans le document."
+description_de: "Offizielle luxemburgische Regierungsanleitung zur Beantragung einer Sterbeurkunde, einschließlich der ausstellenden Behörde, erforderlicher Begleitdokumente, akzeptierter Formen und der im Dokument enthaltenen Informationen."
 source_type: government_portal
 url: "https://guichet.public.lu/en/citoyens/justice/certificats-copies-actes-casier-judicaire/certificats-copies-actes/acte-deces.html"
 jurisdiction:
@@ -26,4 +28,4 @@ provenance:
   created_by: "HirenGajjar"
   updated_at: "2026-05-27"
   updated_by: "HirenGajjar"
-notes: "URL verified 2026-05-27 — page loads correctly. Title matches. Specific Guichet page for the death certificate document. Distinct from the general death life event page. Used to verify the issuing authority and accepted forms in PR #34."
+notes: "URL verified 2026-05-27. German version available at https://guichet.public.lu/de/citoyens/justice/certificats-copies-actes-casier-judicaire/certificats-copies-actes/acte-deces.html Used to verify issuing authority and accepted forms in PR #34."
