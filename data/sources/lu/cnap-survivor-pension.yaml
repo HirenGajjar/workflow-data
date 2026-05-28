@@ -1,0 +1,28 @@
+id: source:lu:cnap:survivor-pension
+object_type: Source
+title: "Survival pension"
+title_fr: "Pension de survie"
+description: "Official CNAP guidance on survivor pension benefits in Luxembourg, including eligibility conditions, qualifying periods, application process, and payment arrangements for surviving spouses, partners, and orphans."
+description_fr: "Informations officielles de la CNAP sur la pension de survie au Luxembourg, notamment les conditions d'éligibilité, les périodes de qualification, la procédure de demande et les modalités de versement pour les conjoints, partenaires et orphelins survivants."
+source_type: institutional_page
+url: "https://cnap.public.lu/en/pensions/pension-survie.html"
+jurisdiction:
+  country: LU
+  region: null
+  municipality: null
+languages:
+  - en
+  - fr
+  - de
+institution_ids: []
+accessed_at: "2026-05-27"
+last_verified_at: null
+evidence_locator: null
+reuse_notes: "Official CNAP (Caisse nationale d'assurance pension) source. Extract only source-backed administrative facts."
+verification_status: discovered
+provenance:
+  created_at: "2026-05-27"
+  created_by: "HirenGajjar"
+  updated_at: null
+  updated_by: null
+notes: "CNAP institution record not yet in data/institutions/lu/ — to be created separately. Page covers survivor pension eligibility, application process, and benefit calculation for surviving spouses, partners, and orphans."
