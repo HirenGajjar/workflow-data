@@ -1,0 +1,30 @@
+id: source:eu:brussels-iv-regulation
+object_type: Source
+title: "EU Succession Regulation (Brussels IV)"
+title_fr: "Règlement successoral européen (Bruxelles IV)"
+title_de: "Europäische Erbrechtsverordnung (Brüssel IV)"
+description: "EU Regulation 650/2012 establishing that cross-border succession is governed by the law of the country of habitual residence at death, unless the deceased explicitly chose their nationality's law. Introduces the European Certificate of Succession valid across all EU member states."
+description_fr: "Règlement UE 650/2012 établissant que la succession transfrontalière est régie par le droit du pays de résidence habituelle au décès, sauf choix exprès du droit national. Introduit le Certificat Successoral Européen (CSE) valable dans tous les États membres."
+description_de: "EU-Verordnung 650/2012, nach der grenzüberschreitende Erbfolge dem Recht des gewöhnlichen Aufenthaltsstaates zum Todeszeitpunkt unterliegt, sofern keine ausdrückliche Rechtswahl getroffen wurde. Führt das Europäische Nachlasszeugnis (ENZ) ein."
+source_type: regulation
+url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0650"
+jurisdiction:
+  country: EU
+  region: null
+  municipality: null
+languages:
+  - en
+  - fr
+  - de
+institution_ids: []
+accessed_at: "2026-05-28"
+last_verified_at: "2026-05-28"
+evidence_locator: null
+reuse_notes: "Official EUR-Lex source. Available in all EU official languages. Extract only source-backed regulatory facts."
+verification_status: structured-from-source
+provenance:
+  created_at: "2026-05-28"
+  created_by: "HirenGajjar"
+  updated_at: null
+  updated_by: null
+notes: "Key provisions: Art. 21 (habitual residence rule), Art. 22 (choice of nationality law), Art. 62-73 (European Certificate of Succession). Applies in all EU member states except Denmark and Ireland for succession matters. Luxembourg applies Brussels IV as directly applicable EU law."
