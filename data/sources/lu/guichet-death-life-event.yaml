@@ -2,8 +2,10 @@ id: source:lu:guichet:death-life-event
 object_type: Source
 title: "Dealing with the death of a loved one"
 title_fr: "Décès d'un proche"
+title_de: "Todesfall eines Angehörigen"
 description: "Official Luxembourg government guidance on the administrative steps to take following the death of a close relative, including required declarations, time-sensitive obligations, and the responsible institutions."
 description_fr: "Données administratives officielles concernant les démarches à suivre lors du décès d'un proche au Luxembourg."
+description_de: "Offizielle luxemburgische Regierungsanleitung zu den administrativen Schritten nach dem Tod eines nahen Angehörigen, einschließlich erforderlicher Meldungen, zeitkritischer Pflichten und der zuständigen Behörden."
 source_type: government_portal
 url: "https://guichet.public.lu/en/citoyens/life-event/famille-education/deces-proche.html"
 jurisdiction:
@@ -13,6 +15,7 @@ jurisdiction:
 languages:
   - en
   - fr
+  - de
 institution_ids:
   - institution:lu:guichet
 accessed_at: "2026-05-27"
@@ -25,4 +28,4 @@ provenance:
   created_by: "clarvia-maintainers"
   updated_at: "2026-05-27"
   updated_by: "HirenGajjar"
-notes: "URL verified 2026-05-27 — page loads correctly. Title updated from 'Death of a close relative' to match current page title 'Dealing with the death of a loved one'."
+notes: "URL verified 2026-05-27. Title updated from 'Death of a close relative' to match current page title. German version available at https://guichet.public.lu/de/citoyens/life-event/famille-education/deces-proche.html"
