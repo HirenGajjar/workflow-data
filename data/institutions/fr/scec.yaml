@@ -1,0 +1,23 @@
+id: institution:fr:scec
+object_type: Institution
+name: "Service central d'état civil (SCEC)"
+jurisdiction:
+  country: FR
+  region: null
+  municipality: null
+function: "French central civil registry responsible for transcribing foreign civil status acts (births, marriages, deaths) for French nationals. Handles transcription of death certificates issued in Luxembourg for French nationals who died abroad."
+official_site: "https://www.diplomatie.gouv.fr/fr/services-aux-francais/etat-civil-et-nationalite-francaise/"
+contact_channels:
+  - type: website
+    value: "https://www.diplomatie.gouv.fr/fr/services-aux-francais/etat-civil-et-nationalite-francaise/"
+    notes: "France Diplomatie civil status section covering transcription of foreign acts."
+languages:
+  - fr
+source_ids: []
+verification_status: discovered
+provenance:
+  created_at: "2026-05-29"
+  created_by: "HirenGajjar"
+  updated_at: null
+  updated_by: null
+notes: "SCEC is located in Nantes and operates under the Ministry of Europe and Foreign Affairs. For a French national who dies in Luxembourg, family must request transcription of the Luxembourg death certificate through SCEC. Required for succession procedures and French civil registry records."
