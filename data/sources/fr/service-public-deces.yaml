@@ -1,0 +1,26 @@
+id: source:fr:service-public-deces
+object_type: Source
+title: "Un proche est décédé"
+title_fr: "Un proche est décédé"
+description: "Official French government guidance covering the full administrative journey after a bereavement, including organising the funeral, notifying institutions, succession steps, and time-sensitive obligations."
+description_fr: "Guidance officielle du gouvernement français sur l'ensemble des démarches administratives après un décès, notamment l'organisation des obsèques, les notifications aux organismes, les étapes successorales et les obligations urgentes."
+source_type: government_portal
+url: "https://www.service-public.fr/particuliers/vosdroits/F16507"
+jurisdiction:
+  country: FR
+  region: null
+  municipality: null
+languages:
+  - fr
+institution_ids: []
+accessed_at: "2026-05-29"
+last_verified_at: "2026-05-29"
+evidence_locator: null
+reuse_notes: "Official French public-service portal source. Verified 01 janvier 2026. Extract only source-backed administrative facts."
+verification_status: source-checked
+provenance:
+  created_at: "2026-05-29"
+  created_by: "HirenGajjar"
+  updated_at: null
+  updated_by: null
+notes: "URL verified 2026-05-29 — page loads correctly, title confirmed as 'Un proche est décédé'. Primary French bereavement guidance page relevant for French nationals and cross-border families connected to France."
