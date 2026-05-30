@@ -1,0 +1,22 @@
+id: condition:repatriation-of-remains
+object_type: Condition
+label: "The family intends to transport the body or ashes to another country"
+condition_type: cross_border
+jurisdiction:
+  country: LU
+  region: null
+  municipality: null
+expression:
+  field: repatriation_requested
+  operator: equals
+  value: true
+human_readable: "The family wishes to transport the deceased's body or ashes to a country other than Luxembourg."
+source_ids:
+  - source:lu:guichet:death-life-event
+verification_status: discovered
+provenance:
+  created_at: "2026-05-28"
+  created_by: "HirenGajjar"
+  updated_at: null
+  updated_by: null
+notes: "Requires a laissez-passer mortuaire (mortuary pass) issued by the Luxembourg commune. For EU countries, the 1973 Strasbourg Convention on the Transfer of Mortal Remains applies. Funeral director typically coordinates documentation. Cremated remains have fewer cross-border restrictions than body transport."
