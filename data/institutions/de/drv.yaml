@@ -1,0 +1,25 @@
+id: institution:de:drv
+object_type: Institution
+name: "Deutsche Rentenversicherung (DRV)"
+jurisdiction:
+  country: DE
+  region: null
+  municipality: null
+function: "German statutory pension insurance body responsible for retirement pensions, survivor benefits, rehabilitation, and cross-border pension coordination. Handles survivor pension (Hinterbliebenenrente) claims and coordinates with foreign pension authorities for cross-border workers."
+official_site: "https://www.deutsche-rentenversicherung.de"
+contact_channels:
+  - type: website
+    value: "https://www.deutsche-rentenversicherung.de"
+    notes: "Main DRV portal for pension information, online applications, and international services."
+languages:
+  - de
+source_ids:
+  - source:de:drv-hinterbliebenenrente
+  - source:de:drv-rente-und-ausland
+verification_status: structured-from-source
+provenance:
+  created_at: "2026-05-29"
+  created_by: "HirenGajjar"
+  updated_at: null
+  updated_by: null
+notes: "DRV is a network of regional carriers plus DRV Bund (federal). For Luxembourg frontaliers (~55,000 daily commuters), DRV Rheinland-Pfalz and DRV Saarland are typically the competent carriers. DRV organises international advisory days with Luxembourg CNAP representatives. Survivor pension requires 5-year qualifying period and marriage/partnership at time of death."

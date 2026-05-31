@@ -1,0 +1,27 @@
+id: scenario:corridor-lu-de
+object_type: Scenario
+title: "Luxembourg — Germany cross-border bereavement corridor"
+description: "Cross-border bereavement scenario for families connected to both Luxembourg and Germany, covering approximately 55,000 frontaliers who commute to Luxembourg from Germany daily."
+scenario_type: corridor
+countries:
+  - LU
+  - DE
+condition_ids:
+  - condition:deceased-is-foreign-national
+  - condition:deceased-is-frontalier
+  - condition:survivor-resides-abroad
+  - condition:assets-in-multiple-jurisdictions
+  - condition:repatriation-of-remains
+source_ids:
+  - source:eu:brussels-iv-regulation
+  - source:eu:social-security-coordination
+  - source:de:drv-hinterbliebenenrente
+  - source:de:drv-rente-und-ausland
+verification_status: discovered
+publication_status: draft
+provenance:
+  created_at: "2026-05-29"
+  created_by: "HirenGajjar"
+  updated_at: null
+  updated_by: null
+notes: "Germany is the second largest frontalier corridor for Luxembourg (~55,000 daily commuters). Key cross-border facts: DRV survivor pension requires marriage/partnership at death and 5-year qualifying period; Sterbevierteljahr provision grants 3 months at deceased's full pension rate with no income offset after death; DRV coordinates with CNAP via EU social security coordination; DRV provides international advisory days for frontaliers; succession governed by Brussels IV habitual residence rule."
