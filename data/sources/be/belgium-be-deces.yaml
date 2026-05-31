@@ -1,0 +1,30 @@
+id: source:be:belgium-be-deces
+object_type: Source
+title: "Décès"
+title_fr: "Décès"
+title_de: "Todesfall"
+description: "Official Belgian government guidance on administrative steps following a death, covering declaration, burial, incineration, succession, inheritance, and international aspects including procedures for deaths occurring abroad."
+description_fr: "Guidance officielle du gouvernement belge sur les démarches administratives après un décès, couvrant la déclaration, l'inhumation, l'incinération, la succession, l'héritage et les aspects internationaux."
+description_de: "Offizielle belgische Regierungsanleitung zu den Verwaltungsschritten nach einem Todesfall, einschließlich Meldung, Beerdigung, Einäscherung, Erbfolge und internationalem Kontext."
+source_type: government_portal
+url: "https://www.belgium.be/fr/famille/deces"
+jurisdiction:
+  country: BE
+  region: null
+  municipality: null
+languages:
+  - fr
+  - nl
+  - de
+institution_ids: []
+accessed_at: "2026-05-30"
+last_verified_at: "2026-05-30"
+evidence_locator: null
+reuse_notes: "Official Belgian federal public service portal. Available in French, Dutch, and German. Extract only source-backed administrative facts."
+verification_status: source-checked
+provenance:
+  created_at: "2026-05-30"
+  created_by: "HirenGajjar"
+  updated_at: null
+  updated_by: null
+notes: "URL verified 2026-05-30 — page loads correctly, title confirmed as 'Décès'. Key fact from issue #40 research: death must be declared to the municipality where the person died (usually handled by the undertaker); the death certificate is then forwarded to the municipality of last residence. Succession duties in Belgium are regional and depend on fiscal residence."

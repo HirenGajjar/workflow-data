@@ -1,0 +1,26 @@
+id: scenario:corridor-lu-be
+object_type: Scenario
+title: "Luxembourg — Belgium cross-border bereavement corridor"
+description: "Cross-border bereavement scenario for families connected to both Luxembourg and Belgium, covering approximately 50,000 frontaliers who commute to Luxembourg from Belgium daily."
+scenario_type: corridor
+countries:
+  - LU
+  - BE
+condition_ids:
+  - condition:deceased-is-foreign-national
+  - condition:deceased-is-frontalier
+  - condition:survivor-resides-abroad
+  - condition:assets-in-multiple-jurisdictions
+  - condition:repatriation-of-remains
+source_ids:
+  - source:eu:brussels-iv-regulation
+  - source:eu:social-security-coordination
+  - source:be:belgium-be-deces
+verification_status: discovered
+publication_status: draft
+provenance:
+  created_at: "2026-05-30"
+  created_by: "HirenGajjar"
+  updated_at: null
+  updated_by: null
+notes: "Belgium is the third largest frontalier corridor for Luxembourg (~50,000 daily commuters). Key cross-border facts: death declared to municipality where death occurred, usually by undertaker; death certificate forwarded to municipality of last residence; succession duties are regional in Belgium and depend on fiscal residence; Brussels IV governs cross-border succession; SFP handles survivor pension coordination with CNAP via EU social security rules."
